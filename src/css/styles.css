@@ -26,10 +26,10 @@ body {
 .btn {
   position: relative;
   background-color: #c18c5d;
-  border-radius: 4em;
+  border-radius: 10px;
   font-size: 24px;
   color: #0d1f2d;
-  padding: 0.8em 1.8em;
+  padding: 16px 40px;
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -49,7 +49,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  border-radius: 4em;
+  border-radius: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -62,7 +62,7 @@ body {
 .btn:active:after {
   box-shadow: 0 0 0 0 white;
   position: absolute;
-  border-radius: 4em;
+  border-radius: 10px;
   left: 0;
   top: 0;
   opacity: 1;
@@ -81,7 +81,7 @@ body {
   padding-left: 5px;
   margin-right: 10px;
   border-color: transparent;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .search-input:hover,
