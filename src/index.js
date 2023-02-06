@@ -32,8 +32,9 @@ async function onSubmit(event) {
     Notify.success(`Hooray! We found ${totalHits} images!`);
     const markup = hits.map(item => createMarkup(item)).join('');
     galleryRef.innerHTML = markup;
-    if (totalHits > 40) {
-      loadRef.classList.remove('js-load-btn');
+    loadRef.classList.remove('js-load-btn');
+    if (totalHits < 40) {
+      loadRef.classList.add('js-load-btn');
       page += 1;
     }
     lightbox.refresh();
