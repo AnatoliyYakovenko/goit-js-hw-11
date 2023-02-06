@@ -151,7 +151,7 @@ body {
 .info-item:not(:last-child) {
   border-right: 4px solid #e4c3ad;
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 480px) {
   .search-form {
     display: flex;
     align-items: center;
