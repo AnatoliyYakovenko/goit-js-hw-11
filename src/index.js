@@ -32,6 +32,7 @@ async function onSubmit(event) {
     Notify.success(`Hooray! We found ${totalHits} images!`);
     const markup = hits.map(item => createMarkup(item)).join('');
     galleryRef.innerHTML = markup;
+
     loadRef.classList.remove('js-load-btn');
     if (totalHits < 40) {
       loadRef.classList.add('js-load-btn');
@@ -43,12 +44,12 @@ async function onSubmit(event) {
     console.log(error);
   }
 }
-
 async function onLoadClick() {
   const response = await getPictures(query);
   const { hits, totalHits } = response;
   const markup = hits.map(item => createMarkup(item)).join('');
   galleryRef.insertAdjacentHTML('beforeend', markup);
+
   lightbox.refresh();
   const amountOfPages = totalHits / 40 - page;
   if (amountOfPages < 1) {
