@@ -51,7 +51,7 @@ async function onLoadClick() {
   galleryRef.insertAdjacentHTML('beforeend', markup);
 
   lightbox.refresh();
-  const amountOfPages = totalHits / 40 - page;
+  const amountOfPages = totalHits / 40;
   if (amountOfPages < 1) {
     loadRef.classList.add('js-load-btn');
     Notify.info("We're sorry, but you've reached the end of search results.");
